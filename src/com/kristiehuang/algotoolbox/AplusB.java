@@ -11,5 +11,6 @@ class AplusB {
         int a = s.nextInt();
         int b = s.nextInt();
         System.out.println(sumOfTwoDigits(a, b));
+        //test
     }
 }
