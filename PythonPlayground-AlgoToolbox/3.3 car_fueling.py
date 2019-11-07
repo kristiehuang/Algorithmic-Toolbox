@@ -10,7 +10,10 @@ def compute_min_refills(distance, tank, stops):
     # 20, 50, 80
     #
     # 2 stops -- 20, 60
-
+5 miles
+6 tank
+2 stops
+2 4
 
     refills = 0
     currentStop = 0
