@@ -7,6 +7,8 @@ def get_optimal_value(capacity, weights, values):
     def highest_utility_helper(w, v):
         existing_max = 0.
         index = 0
+        if (all(x == 0 for x in w)):
+            return -1
         for i in range(len(w)):
             if (w[i] > 0) and (v[i] / w[i]) > existing_max:
                 index = i
@@ -14,9 +16,13 @@ def get_optimal_value(capacity, weights, values):
         return index
 
     while capacity > 0:
+        #print(capacity, weights, values)
         i = highest_utility_helper(weights, values)
+        #print("i is ", i)
 
-        if (capacity > weights[i]):
+        if i == -1:
+            break
+        elif (capacity > weights[i]):
             value += values[i]
             capacity -= weights[i]
             weights[i] = 0

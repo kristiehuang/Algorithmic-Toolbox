@@ -5,8 +5,10 @@ import sys
 def max_dot_product(a, b):
     #write your code here
     res = 0
+    sortA = sorted(a)
+    sortB = sorted(b)
     for i in range(len(a)):
-        res += a[i] * b[i]
+        res += sortA[i] * sortB[i]
     return res
 
 if __name__ == '__main__':
